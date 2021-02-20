@@ -23,14 +23,14 @@
 				<div id="action" style="text-align: center;">
 					<button onclick="showOne()" id="general" class="button1">Some Common Planets</button>
 					<button onclick="showTwo()" id="custom" class="button1">Custom</button>
-			</div>
+			    </div>
 		</div>
 		<br><br>
 
 		<div id="one" style="display: none;">
 			<span>*</span><h2><b>Step 2:</b> Pick a Planet</h2>
 				<br>
-				<div id="planets">
+				<div id="planets" style="text-align: center;">
 					<button onclick="bhrad2()" id="mercury" class="button1">Mercury</button>
 					<button onclick="bhrad2()" id="venus" class="button1">Venus</button>
 					<button onclick="bhrad2()" id="earth" class="button1">Earth</button>
@@ -45,16 +45,20 @@
 
 		<div id="two" style="display: none;">
 			<span>*</span><h2><b>Step 2:</b> Enter the Mass of the Star</h2>
-			    <br><br><br>
+			    <br><br>
 			    <div style="text-align: center;">
 					<label>Mass of the Star<span style="font-size: 125%;">(in Kg)</span>: </label>
 					<input type="number" name="decimal" placeholder="Decimal Part" style="margin: 0px 10px;">    <i style="margin: 0px 10px 0px 0px;">X</i>    <sub style="font-size: large;"> 10^</sub>
 					<sup><input type="text" size="1" name="exponent" placeholder="Exp.."></sup>
+					<br><br>
+					<label>Upto how many Decimal Places</label>
+					<input type="text" size="1" name="precision">
+					<br><br>
 					<button onClick="bhrad()">Calculate</button><br><br><br>
 				</div>
 		</div>
 
-		<div id="display" style="display: none;">
+		<div id="display" style="display: none; scroll-behavior: smooth;">
 			<span>*</span><h2><b>Step 3:</b> The Black Hole Radius Is</h2>
 				<br>
 				<div style="text-align: center;">
@@ -77,11 +81,12 @@
 	function bhrad() {
 		var d = parseInt(document.getElementsByName('decimal')[0].value);
 		var e = parseInt(document.getElementsByName('exponent')[0].value);
+		var p = parseInt(document.getElementsByName('precision')[0].value);
 		var m = d * Math.pow(10, e);
 		const G = 6.67 * Math.pow(10, -11);
 		const c = 3 * Math.pow(10, 8);
 		var r = 2*G*m/(c*c);
-		document.getElementsByName('radius')[0].value = r.toPrecision(5);
+		document.getElementsByName('radius')[0].value = r.toPrecision(p+1);
 		document.getElementById('display').style.display = "block";
    		document.getElementById('one').style.display = "none";
 	}
@@ -90,6 +95,10 @@
 
 	}
 </script>
+<!--To add space in between content and footer, so that when the content increase it's still visible & not hidden behind the footer-->
+<div class="spacer">
+	.
+</div>
 <footer class="w3-container w3-center w3-large w3-bottom">
 		<p><sub>Copyright Device Interactions © 2021 |<a href="" target="_blank">Privacy Policy</a></sub></p>
 	</footer>

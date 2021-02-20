@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shuffled Facts</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="w3-container">
+		<div>
+			<h1>Universal Deduction</h1>
+		</div>
+	</header>
+	<br>
+	<div>
+		<div>
+			<span>*</span><h2><b>Step 1:</b> Type of Facts</h2>
+				<br>
+				<div id="facts" style="text-align: center;">
+						<button onclick="showOne()" id="theoretical" class="button1">Theoretical</button>
+						<button onclick="showTwo()" id="experimental" class="button1">Experimental</button>
+				</div>
+		</div>
+		<br><br>
+
+		<div  id="one" style="display: none;">
+			<span>*</span><h2><b>Step 2:</b> Select any One</h2>
+				<br><br>
+				<div style="text-align: center;">
+						<button onclick="" id="efe" class="button1">Einstein Field Equation</button>
+						<button onclick="" id="hr" class="button1">Hawking Radiation</button>
+						<button onclick="" id="st" class="button1">String Theory</button>
+						<br><br>
+						<button onclick="" id="wormholes" class="button1">Wormholes</button>
+				</div>
+		</div>
+
+		<div id="two" style="display: none;">
+			<span>*</span><h2><b>Step 2:</b> Choose any One</h2>
+				<br><br>
+				<div style="text-align: center;">
+					<button onclick="show()" id="ligo" class="button1">LIGO Gravitational Wave Experiment</button>
+					<button onclick="" id="drknrg" class="button1">Dark Energy Detecting Experiment</button>
+					<br><br>
+					<button onclick="" id="lhc" class="button1">CERN LHC</button>
+					<button onclick="" id="nasa" class="button1">NASA Perseverence Rover</button>
+				</div>
+		</div>
+
+		<div id="otp" style="display: none;">
+			<span>*</span><h2><b>Step 3:</b> Output</h2>
+			<br><br>
+		</div>
+	</div>
+<script>
+	function showOne() {
+	document.getElementById('one').style.display = "block";		
+	document.getElementById('two').style.display = "none";
+	//document.getElementById('display').style.display = "none";
+	}
+
+    function showTwo() {
+    document.getElementById('two').style.display = "block";
+	document.getElementById('one').style.display = "none";
+	//document.getElementById('display').style.display = "none";
+	}
+
+	//Function to shuffle the array.
+	function shuffleArray(array){
+	    for(let i = array.length - 1; i>0; i--){
+	    	const j = Math.floor(Math.random() * (i+1));
+	   		const temp = array[i];
+	   		array[i] = array[j];
+	   		array[j] = temp;
+	   	}
+    	return array;
+    }
+
+    //Function to show the result.
+    function show(){
+    	document.getElementById('otp').style.display = "block";
+    	var imgAry = new Array();
+
+		imgAry[0] = new Image();
+		imgAry[0].src = '1.jfif';
+
+		imgAry[1] = new Image();
+		imgAry[1].src = '2.jfif';
+
+		imgAry[2] = new Image();
+		imgAry[2].src = '3.jfif';
+
+		imgAry[3] = new Image();
+		imgAry[3].src = '4.jfif';
+
+		imgAry[4] = new Image();
+		imgAry[4].src = '5.jfif';
+    	var imgAry1 = shuffleArray(imgAry);
+    	window.open(imgAry1[0].src);
+    }
+</script>
+</body>
+</html>
