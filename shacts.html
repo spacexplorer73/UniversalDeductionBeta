@@ -8,11 +8,12 @@
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="shuffle.js"></script>
 </head>
 <body>
 	<header class="w3-container">
 		<div>
-			<h1>Universal Deduction</h1>
+			<a href="index.html" style="margin: 0px; padding: 0px;"><h1>Universal Deduction</h1></a>
 		</div>
 	</header>
 	<br>
@@ -78,29 +79,6 @@
 	   		array[j] = temp;
 	   	}
     	return array;
-    }
-
-    //Function to show the result.
-    function show(){
-    	document.getElementById('otp').style.display = "block";
-    	var imgAry = new Array();
-
-		imgAry[0] = new Image();
-		imgAry[0].src = '1.jfif';
-
-		imgAry[1] = new Image();
-		imgAry[1].src = '2.jfif';
-
-		imgAry[2] = new Image();
-		imgAry[2].src = '3.jfif';
-
-		imgAry[3] = new Image();
-		imgAry[3].src = '4.jfif';
-
-		imgAry[4] = new Image();
-		imgAry[4].src = '5.jfif';
-    	var imgAry1 = shuffleArray(imgAry);
-    	window.open(imgAry1[0].src);
     }
 </script>
 </body>

@@ -39,18 +39,48 @@ i{
 	font-family: Papyrus;
 }
 
-a{
+/*a{
 	font-size: 150%;
 	margin: 100px;
 	padding: 5px;
-}
+}*/
 
 section{
 	background-color: #b5edb8;
 }
 
 label{
-	font-size: 125%;
+	font-size: 100%;
+}
+
+.signin{
+	border-color: lime;
+	border-radius: 10px;
+}
+
+.chkbox{
+	cursor: pointer;
+}
+
+.btn{
+	border-radius: 3px;
+	background-color: lime;
+	color: white;
+	cursor: pointer;
+	transition-duration: 0.4s;
+	margin: 0px 5px 0px;
+}
+
+.btn:hover{
+	background-color: red;
+}
+
+hr{
+    margin-right: 15px !important;
+	background-color: lime !important;
+	border: 0;
+	height: 2px !important;
+	margin-bottom: 1%;
 }
 
 .nav-bar{
@@ -124,19 +154,24 @@ textarea {
     resize: none;
 }
 
-footer{
-	background: #7bc47f;
+.footer{
+	background-color: #7bc47f;
+	position: relative;
+	bottom: 0 !important;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 
-footer a{
+.footer a{
 	font-size: 13px !important;
-	color: black !important;
+	color: black;
 	display: inline;
 	text-decoration: none;
 	margin: 5px !important;
 }
 
-footer a:hover{
+.footer a:hover{
 	text-decoration: underline;
 }
 
@@ -185,5 +220,31 @@ p{
 
 .spacer{
 	visibility: hidden;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
+}
+
+.spacer1{
+	visibility: hidden;
+	margin-bottom: 10px;
+}
+
+.main-container{
+	display: flex;
+	border: 2px solid lime;
+	border-radius: 25px;
+	margin-left: 350px;
+	margin-right: 450px;
+}
+
+.login{
+	border-right: 3px solid lime;
+	margin: 0px 20px 0px 20px;
+}
+
+.signup{
+	
+}
+
+.login, .signup{
+	padding: 2%;
 }

@@ -4,17 +4,25 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Black Hole Radius Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="style2.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<header class="w3-container">
-		<div>
+	<!--Nav-Bar System-->
+	<nav>
+		<div class="logo">
 			<h1>Universal Deduction</h1>
 		</div>
-	</header>
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="index.html #More">More</a></li>
+			<li><a href="index.html #Contact Us">Contact Us</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
 	<br>
 	<div>
 		<div>
@@ -58,11 +66,19 @@
 				</div>
 		</div>
 
-		<div id="display" style="display: none; scroll-behavior: smooth;">
+		<div id="display" style="display: none;">
 			<span>*</span><h2><b>Step 3:</b> The Black Hole Radius Is</h2>
 				<br>
 				<div style="text-align: center;">
-					<label>Radius is<span style="font-size: 125%;">(in m)</span>: </label><input type="number" name="radius" style="margin: 0px 10px;">
+					<label>Radius is<span style="font-size: 125%;">(in m)</span>: </label><input type="text" name="radius" style="margin: 0px 10px;">
+				</div>
+		</div>
+
+		<div id="display2" style="display: none;">
+			<span>*</span><h2><b>Step 3:</b> The Black Hole Radius Is</h2>
+				<br>
+				<div style="text-align: center;">
+					<label>Radius is<span style="font-size: 125%;">(in m)</span>: </label><input type="text" name="rad" style="margin: 0px 10px;">
 				</div>
 		</div>
 	</div>
@@ -76,6 +92,7 @@
 	function showTwo() {
    		document.getElementById('two').style.display = "block";
    		document.getElementById('one').style.display = "none";
+   		document.getElementById('display2').style.display = "none";
     }
 
 	function bhrad() {
@@ -92,15 +109,15 @@
 	}
 
 	function bhrad2() {
-
+		document.getElementById('display2').style.display = "block";
 	}
 </script>
-<!--To add space in between content and footer, so that when the content increase it's still visible & not hidden behind the footer-->
-<div class="spacer">
-	.
-</div>
-<footer class="w3-container w3-center w3-large w3-bottom">
+	<!--To add space in between content and footer, so that when the content increase it's still visible & not hidden behind the footer-->
+	<div class="spacer">
+		.
+	</div>
+	<div class="w3-container w3-bottom footer">
 		<p><sub>Copyright Device Interactions © 2021 |<a href="" target="_blank">Privacy Policy</a></sub></p>
-	</footer>
+	</div>
 </body>
 </html>

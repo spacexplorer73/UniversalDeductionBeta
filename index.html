@@ -4,24 +4,38 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Universal Deduction Beta</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="style2.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	<header class="w3-container">
-		<div>
+	<!--Nav-Bar System-->
+	<nav>
+		<div class="logo">
 			<h1>Universal Deduction</h1>
+		</div>
+		<ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#More">More</a></li>
+			<li><a href="#Contact Us">Contact Us</a></li>
+			<li><a href="login.html">Login</a></li>
+		</ul>
+	</nav>
+	<!--Button System-->
+	<!--<header class="w3-container">
+		<div>
+			<a href="index.html" style="margin: 0px; padding: 0px;"><h1>Universal Deduction</h1></a>
 		    <div class="nav-bar">
 		    	<button class="button1" onclick="window.open('#Contact Us','_self')">Contact Us</button>
-		    	<button class="button1" onclick="window.open('#More','_self')"><!--<i class="fa fa-caret-down" aria-hidden="true"></i>--> More</button>
+		    	<button class="button1" onclick="window.open('#More','_self')">More</button>
 		    	<button class="button1" onclick="window.open('#Home','_self')">Home</button>
 		    </div>
 		</div>
-	</header>
+	</header>-->
 	<br>
-		<main id="Home">
+	<main id="Home">
 		<span>*</span><h2>Home</h2>
 		<div>
 			<strong><i>Welcome space wonderers!</i><br>This site is for young insightful aspirers, who are keen to understand about the Universe as we know it.<br>I'll be uploading new content on a regular basis.<br>Please do enjoy!</strong>
@@ -32,11 +46,14 @@
 		<span>*</span><h2>More</h2>
 		<div>
 			<button class="button1" onclick="window.open('https://spacexplorer73.github.io/UniversalDeduction/','_blank')">Our Old Website</button>
-			<button class="button1 tooltip" onclick="window.open('bhcalc.html','_blank')">Black Hole Radius Calculator<p class="tooltiptext">The Schwarzschild Radius Calculator</p></button>
-			<button class="button1 tooltip" onclick="window.open('shacts.html','_blank')">Shacts<sup style="color: red; padding: 5px;">NEW</sup><p class="tooltiptext">Shuffling Facts...<br>Our New Initiative<br>Work In Progress...</p></button>
+			<button class="button1 tooltip" onclick="window.open('info_bhcalc.html','_blank')">Black Hole Radius Calculator<p class="tooltiptext">The Schwarzschild Radius Calculator</p></button>
+			<button class="button1 tooltip" onclick="window.open('shacts.html','_blank')">Shacts<sup style="color: red; padding: 5px;">NEW</sup><p class="tooltiptext">Shuffling Facts...<br>Our New Initiative<br>Work in Progress..</p></button>
 		</div>
 	</main>
 	<br>
+	<div class="spacer1">
+		.
+	</div>
 	<section id="Contact Us">
 		<span>*</span><h2>Contact Us</h2>
 		<table class="w3-table">
@@ -51,7 +68,7 @@
 							<input type="text" name="name" class="w3-input w3-border" placeholder="Name" autocomplete="off">
 						</div>
 						<div class="w3-half">
-							<input type="email" name="email" class="w3-input w3-border" placeholder="E-Mail" autocomplete="off">
+							<input type="email" name="email" class="w3-input w3-border" placeholder="E-Mail" autocomplete="off" required="@">
 						</div>
 					</div>
 					<textarea name="message" placeholder="Message"></textarea>
@@ -63,8 +80,8 @@
 		</div>
 	</table>
 	</section>
-	<footer class="w3-container w3-center w3-large">
+	<div class="w3-container footer">
 		<p><sub>Copyright Device Interactions © 2021 |<a href="" target="_blank">Privacy Policy</a></sub></p>
-	</footer>
+	</div>
 </body>
 </html>
